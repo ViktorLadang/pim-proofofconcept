@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon authorservice.ts"
+    "devStart": "nodemon ./services/authorservice.ts"
   },
   "repository": {
     "type": "git",

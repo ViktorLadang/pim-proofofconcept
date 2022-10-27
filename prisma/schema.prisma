@@ -18,6 +18,15 @@ datasource db {
 //npx prisma generate
 
 model Author {
-  id   String @id @default(uuid())
-  name String
+  id    String @id @default(uuid())
+  name  String
+  email String
+  Book  Book[]
+}
+
+model Book {
+  id       String @id @default(uuid())
+  title    String
+  author   Author @relation(fields: [authorId], references: [id])
+  authorId String
 }
