@@ -6,7 +6,7 @@ async function main() {
   const user = await prisma.author.create({
     //when generating new properties and ctrl + space doesn't work -> ctrl + rmk function
     data: {
-      name: "Ruben",
+      name: "Brandon Sanderson",
     },
   });
   console.log(user);
