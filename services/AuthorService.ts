@@ -7,6 +7,7 @@ async function main() {
     //when generating new properties and ctrl + space doesn't work -> ctrl + rmk function
     data: {
       name: "Brandon Sanderson",
+      email: "BrandonSander@gmail.com"
     },
   });
   console.log(user);
