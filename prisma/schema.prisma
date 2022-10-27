@@ -24,9 +24,28 @@ model Author {
   Book  Book[]
 }
 
+model User {
+  id            String @id @default(uuid())
+  name          String
+  email         String
+  favoriteBooks Book[]
+}
+
 model Book {
-  id       String @id @default(uuid())
-  title    String
-  author   Author @relation(fields: [authorId], references: [id])
-  authorId String
+  id        String @id @default(uuid())
+  title     String
+  author    Author @relation(fields: [authorId], references: [id])
+  authorId  String
+  publisher String
+  genre     Genre  @default(ADVENTURE)
+  User      User[]
+}
+
+enum Genre {
+  DETECTIVE
+  MYSTERY
+  FANTASY
+  ACTION
+  ADVENTURE
+  COMIC
 }
